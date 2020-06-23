@@ -10,7 +10,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	texttmpl "text/template"
 )
 
 const (
@@ -21,7 +20,7 @@ const (
 )
 
 var (
-	TemplateFunctions = texttmpl.FuncMap{
+	TemplateFunctions = template.FuncMap{
 		"cssTag":    CSSTag,
 		"cssInline": CSSInline,
 		"jsTag":     JSTag,
